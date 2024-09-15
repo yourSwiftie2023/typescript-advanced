@@ -2,7 +2,7 @@
   /** js原始类型：number, string, boolean, bigint, symbol, null, undefined , object **/
 
   // string
-  const name: string = "蜡笔小新";
+  const name: string = '蜡笔小新';
 
   // number
   const age: number = 18;
@@ -18,7 +18,7 @@
 
   // object
   const obj: object = {
-    name: "蜡笔小新",
+    name: '蜡笔小新',
     age: 18,
   };
 
@@ -41,7 +41,7 @@
   /** void **/
   // void 操作符会执行后面跟着的表达式并返回一个 undefined
   void (function name() {
-    console.log("name");
+    console.log('name');
   })();
 
   // function f1(): void;
@@ -63,7 +63,7 @@
   /** 数组的类型标注 **/
   const arr1: number[] = [1, 2, 3];
   const arr2: Array<number> = [1, 2, 3];
-  // 只读数组 , 仅允许数组、元组添加 readonly 标记，修饰对象的熟悉也可添加
+  // 只读数组 , 仅允许数组、元组添加 readonly 标记，修饰对象的属性也可添加
   const readonlyArr: readonly number[] = [1, 2, 3];
   const readonlyArr2: ReadonlyArray<number> = [1, 2, 3];
   // 固定长度的数组请使用元组，提升数组结构的严谨性
@@ -71,7 +71,7 @@
   // 元组内容是可选的
   const arr4: [number, number?, string?] = [1, ,];
   // 具名元组
-  const arr5: readonly [name: string, age?: number] = ["蜡笔小新", 18];
+  const arr5: readonly [name: string, age?: number] = ['蜡笔小新', 18];
 }
 
 {
@@ -83,7 +83,7 @@
   }
 
   const obj1 = {
-    name: "蜡笔小新",
+    name: '蜡笔小新',
     age: 18,
     male: true,
   } satisfies IDescription;
@@ -99,7 +99,7 @@
   }
 
   const obj2 = {
-    name: "蜡笔小新",
+    name: '蜡笔小新',
     male: true,
     other: {
       a: 1,
@@ -115,9 +115,9 @@
   const tmp2: Object = null;
   const tmp3: Object = void 0;
 
-  const tmp4: Object = "linbudu";
+  const tmp4: Object = 'linbudu';
   const tmp5: Object = 599;
-  const tmp6: Object = { name: "linbudu" };
+  const tmp6: Object = { name: 'linbudu' };
   const tmp7: Object = () => {};
   const tmp8: Object = [];
 
@@ -126,10 +126,10 @@
   const tmp18: object = null;
   const tmp19: object = void 0;
 
-  const tmp20: object = "linbudu"; // X 不成立，值为原始类型
+  const tmp20: object = 'linbudu'; // X 不成立，值为原始类型
   const tmp21: object = 599; // X 不成立，值为原始类型
 
-  const tmp22: object = { name: "linbudu" };
+  const tmp22: object = { name: 'linbudu' };
   const tmp23: object = () => {};
   const tmp24: object = [];
 
@@ -138,13 +138,13 @@
   const tmp26: {} = null;
   const tmp27: {} = void 0; // void 0 等价于 undefined
 
-  const tmp28: {} = "linbudu";
+  const tmp28: {} = 'linbudu';
   const tmp29: {} = 599;
-  const tmp30: {} = { name: "linbudu" };
+  const tmp30: {} = { name: 'linbudu' };
   const tmp31: {} = () => {};
   const tmp32: {} = [];
   // 虽然能够将其作为变量的类型，但你实际上无法对这个变量进行任何赋值操作：
-  tmp30.name = "linbudu"; // 类型 {} 中不存在属性“name”
+  tmp30.name = 'linbudu'; // 类型 {} 中不存在属性“name”
 
   // 最后，为了更好地区分 Object、object 以及{}这三个具有迷惑性的类型，我们再做下总结：
   // 在任何时候都不要，不要，不要使用 Object 以及类似的装箱类型。
