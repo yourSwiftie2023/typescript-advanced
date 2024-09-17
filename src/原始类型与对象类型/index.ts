@@ -63,7 +63,7 @@
   /** 数组的类型标注 **/
   const arr1: number[] = [1, 2, 3];
   const arr2: Array<number> = [1, 2, 3];
-  // 只读数组 , 仅允许数组、元组添加 readonly 标记，修饰对象的属性也可添加
+  // 只读数组 , 仅允许类、数组、元组添加 readonly 标记，修饰对象的属性也可添加
   const readonlyArr: readonly number[] = [1, 2, 3];
   const readonlyArr2: ReadonlyArray<number> = [1, 2, 3];
   // 固定长度的数组请使用元组，提升数组结构的严谨性
